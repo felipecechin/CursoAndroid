@@ -1,6 +1,7 @@
 package br.com.whatsappandroid.cursoandroid.whatsapp.activity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
@@ -81,6 +83,13 @@ public class LoginActivity extends AppCompatActivity {
 //                Log.i("TOKEN", usuario.get("token"));
 
                 boolean enviadoSMS = enviaSMS("+"+telefoneSemFormatacao, mensagemEnvio);
+                if (enviadoSMS) {
+                    Intent intent = new Intent(LoginActivity.this, ValidadorActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(LoginActivity.this, "Problema ao enviar o SMS, tente novamente!", Toast.LENGTH_LONG).show();
+                }
 
             }
         });
