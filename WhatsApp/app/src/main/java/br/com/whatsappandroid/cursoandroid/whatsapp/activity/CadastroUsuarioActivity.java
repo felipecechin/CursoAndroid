@@ -1,5 +1,6 @@
 package br.com.whatsappandroid.cursoandroid.whatsapp.activity;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +19,8 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
 import br.com.whatsappandroid.cursoandroid.whatsapp.R;
 import br.com.whatsappandroid.cursoandroid.whatsapp.config.ConfiguracaoFirebase;
+import br.com.whatsappandroid.cursoandroid.whatsapp.helper.Base64Custom;
+import br.com.whatsappandroid.cursoandroid.whatsapp.helper.Preferencias;
 import br.com.whatsappandroid.cursoandroid.whatsapp.model.Usuario;
 
 public class CadastroUsuarioActivity extends AppCompatActivity {
@@ -60,10 +63,13 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Toast.makeText(CadastroUsuarioActivity.this, "Sucesso ao cadastrar usuário", Toast.LENGTH_LONG).show();
-                        usuario.setId(task.getResult().getUser().getUid());
+                        String identificadorUsuario = Base64Custom.codificarBase64(usuario.getEmail());
+                        usuario.setId(identificadorUsuario);
                         usuario.salvar();
-                        autenticacao.signOut();
-                        finish();
+                        Preferencias preferencias = new Preferencias(CadastroUsuarioActivity.this);
+                        preferencias.salvarDados(identificadorUsuario);
+
+                        abrirLoginUsuario();
                     } else {
                         String erroExcecao = "";
                         try {
@@ -83,6 +89,12 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    private void abrirLoginUsuario() {
+        Intent intent = new Intent(CadastroUsuarioActivity.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     private boolean verificarCampos(Usuario usuario) {

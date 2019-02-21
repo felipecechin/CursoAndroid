@@ -5,7 +5,7 @@ android {
     buildToolsVersion '27.0.3'
 
     defaultConfig {
-        applicationId "br.com.whatsappandroid.cursoandroid.whatsapp"
+        applicationId "projetofragmento.cursoandroid.com.projetofragmento"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
@@ -23,13 +23,8 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:27.+'
-    compile 'com.google.firebase:firebase-core:16.0.1'
-    compile 'com.google.firebase:firebase-database:16.0.3'
-    compile 'com.android.support:design:27.+'
-    compile 'com.github.rtoshiro.mflibrary:mflibrary:1.0.0'
-    compile 'com.google.firebase:firebase-auth:16.0.4'
     compile 'com.android.support:support-v4:27.+'
 }
-apply plugin: 'com.google.gms.google-services'
+
 
 
