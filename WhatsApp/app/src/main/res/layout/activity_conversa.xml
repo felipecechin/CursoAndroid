@@ -14,15 +14,19 @@
         android:id="@+id/lv_conversas"
         android:padding="8dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tb_conversa"
+        android:layout_above="@+id/ll_mensagem"></ListView>
 
     <LinearLayout
+        android:id="@+id/ll_mensagem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true">
         <EditText
+            android:id="@+id/edit_mensagem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Mensagem"
@@ -31,6 +35,7 @@
             android:textColorHint="@android:color/black"/>
 
         <ImageButton
+            android:id="@+id/bt_enviar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_send"
