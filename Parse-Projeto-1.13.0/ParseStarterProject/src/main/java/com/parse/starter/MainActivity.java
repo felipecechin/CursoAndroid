@@ -17,11 +17,14 @@ import android.view.MenuItem;
 
 import com.parse.FindCallback;
 import com.parse.GetCallback;
+import com.parse.LogInCallback;
 import com.parse.ParseAnalytics;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 import com.parse.SaveCallback;
+import com.parse.SignUpCallback;
 
 import java.util.List;
 
@@ -32,52 +35,39 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        ParseObject pontuacao =  new ParseObject("Pontuacao");
-//        pontuacao.put("nome", "Maria");
-//        pontuacao.put("pontos", 150);
-//        pontuacao.saveInBackground(new SaveCallback() {
+//        ParseUser usuario = new ParseUser();
+//        usuario.setUsername("fcechin");
+//        usuario.setPassword("felipe");
+//        usuario.setEmail("ficechin@hotmail.com");
+//
+//        usuario.signUpInBackground(new SignUpCallback() {
 //            @Override
 //            public void done(ParseException e) {
 //                if (e==null) {
-//
+//                    Log.i("salvarUsuario", "usuario salvo");
 //                } else {
-//
+//                    Log.i("salvarUsuario", "usuario nao salvo "+e.getMessage());
 //                }
 //            }
 //        });
 
-//        ParseQuery<ParseObject> consulta = ParseQuery.getQuery("Pontuacao");
-//        consulta.getInBackground("VihM3q9gA4", new GetCallback<ParseObject>() {
-//            @Override
-//            public void done(ParseObject object, ParseException e) {
-//                if (e==null) {
-//                    object.put("pontos", 500);
-//                    object.saveInBackground();
-//                } else {
+        //ParseUser.logOut();
+
+//        if (ParseUser.getCurrentUser() !=null) {
+//            Log.i("LoginUsuario", "usuario esta logado");
+//        } else {
+//            Log.i("LoginUsuario", "usuario nao esta logado");
+//        }
 //
-//                }
-//            }
-//        });
-
-        ParseQuery<ParseObject> filtro = ParseQuery.getQuery("Pontuacao");
-        //filtro.whereEndsWith("nome", "ia");
-        filtro.whereGreaterThanOrEqualTo("pontos", 150);
-        filtro.addAscendingOrder("pontos");
-
-
-        filtro.findInBackground(new FindCallback<ParseObject>() {
+        ParseUser.logInInBackground("fcechin", "felipeeeeee", new LogInCallback() {
             @Override
-            public void done(List<ParseObject> objects, ParseException e) {
+            public void done(ParseUser user, ParseException e) {
                 if (e==null) {
-                    for (ParseObject object:objects) {
-                        Log.i("listarDados", "objetos - "+object.get("nome") + " ponto:" + object.get("pontos"));
-                    }
+                    Log.i("LoginUsuario", "usuario logou");
                 } else {
-                    Log.i("listarDados", e.getMessage());
+                    Log.i("LoginUsuario", "usuario nao logou");
                 }
             }
         });
-
-
     }
 }
