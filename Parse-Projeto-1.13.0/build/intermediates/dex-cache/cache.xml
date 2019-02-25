@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Felipe\Desktop\Parse-Projeto-1.13.0\ParseStarterProject\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="20a3f682dba5b1b9b186b7d651eb84fe628ad14d">
+        <dex dex="C:\Users\Felipe\Desktop\Parse-Projeto-1.13.0\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_bf8a975fc6252acc137b448a5cf199520ba57420\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Felipe\.gradle\caches\modules-2\files-2.1\com.parse\parse-android\1.13.0\58a7d54b6a4f28be11f0cecec93097eddf473e6f\parse-android-1.13.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="58a7d54b6a4f28be11f0cecec93097eddf473e6f">
+        <dex dex="C:\Users\Felipe\Desktop\Parse-Projeto-1.13.0\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\parse-android-1.13.0_cb9c08ed67f4656fc87d0e6471ecb9b335fd6890\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Felipe\Desktop\Parse-Projeto-1.13.0\ParseStarterProject\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="74a4a8c2955fdb338c0ae45dc50e6c88ad0dc30b">
+        <dex dex="C:\Users\Felipe\Desktop\Parse-Projeto-1.13.0\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_fd3a8146564f430160d828a4e6c2ee38fe52ecbf\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Felipe\Desktop\Parse-Projeto-1.13.0\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\Felipe\Desktop\Parse-Projeto-1.13.0\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.2.0_71b101d11ca9d7f791cc0e88eb6359f7a02181d2\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Felipe\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\Felipe\Desktop\Parse-Projeto-1.13.0\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.2.0_70596a8f564769ed89f043f1e13972dfd453d3d9\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Felipe\Desktop\Parse-Projeto-1.13.0\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\Felipe\Desktop\Parse-Projeto-1.13.0\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.0_877328900d39d1baf3092bc3635c3b0bf2f792e4\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Felipe\Desktop\Parse-Projeto-1.13.0\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\Felipe\Desktop\Parse-Projeto-1.13.0\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.0_1600024b2539c2e204b7a4cd800e2e73c1d0ad2f\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Felipe\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\Users\Felipe\Desktop\Parse-Projeto-1.13.0\ParseStarterProject\build\intermediates\transforms\dex\debug\folders\1000\10\bolts-tasks-1.4.0_3ec10922255e7e0096e8b27eb1506fe3bc48ace6\classes.dex" />
+    </item>
+
+</items>
