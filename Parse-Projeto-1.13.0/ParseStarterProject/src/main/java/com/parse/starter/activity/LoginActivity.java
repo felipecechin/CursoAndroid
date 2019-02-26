@@ -14,6 +14,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        verificarUsuarioLogado();
     }
 
     public void abrirCadastroUsuario(View view) {
@@ -23,7 +25,13 @@ public class LoginActivity extends AppCompatActivity {
 
     private void verificarUsuarioLogado() {
         if (ParseUser.getCurrentUser()!=null) {
-
+            abrirAreaPrincipal();
         }
+    }
+
+    private void abrirAreaPrincipal() {
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
